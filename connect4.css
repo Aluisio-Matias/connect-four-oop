@@ -1,0 +1,56 @@
+/* game board table */
+#board td {
+  width: 95px;
+  height: 95px;
+  border: solid 2px #688;
+  background: rgb(187, 218, 253);
+  position: relative;
+  
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+.piece {
+  /* make pieces into circles */
+  border-radius: 50%;
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  /* setting piece animations */
+  animation: slideMe .5s ease-in;
+  overflow: hidden;
+}
+
+/* slide down animation to the pieces */
+@keyframes slideMe {
+  0%{
+  transform: translateY(-600px)
+  
+  }
+}
+
+/* column-top is table row of clickable areas for each column */
+#column-top td {
+  border: dashed 1px gold;
+}
+
+#column-top td:hover {
+  background-color: gold;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% { color: #f7fcf0; }
+  12.5% { color: #e0f3db; }
+  25% { color: #ccebc5; }
+  37.5% { color: #a8ddb5;}
+  50% { color: #7bccc4; }
+  62.5% { color: #4eb3d3; }
+  75% { color: #2b8cbe; }
+  87.5% { color: #0868ac; }
+  100% { color: #084081; }
+}
